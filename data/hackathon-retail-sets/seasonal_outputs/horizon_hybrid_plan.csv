@@ -1,0 +1,14 @@
+horizon,candidate
+h1,q50_w20_flat_s0.00_r0.00_dead3_floor1.00
+h2,q50_w20_flat_s0.00_r0.00_dead3_floor0.00
+h3,q45_w20_global_ratio_s0.20_r0.00_dead3_floor0.00
+h4,q45_w20_flat_s0.00_r0.00_dead3_floor1.00
+h5,q45_w20_flat_s0.00_r0.00_dead3_floor1.00
+h6,q45_w20_flat_s0.00_r0.00_dead3_floor1.00
+h7,q40_w26_flat_s0.00_r0.00_dead3_floor0.00
+h8,q40_w26_flat_s0.00_r0.00_dead5_floor0.00
+h9,q45_w20_flat_s0.00_r0.00_dead3_floor0.00
+h10,q45_w20_flat_s0.00_r0.00_dead5_floor1.00
+h11,q45_w20_flat_s0.00_r0.00_dead5_floor1.00
+h12,q45_w20_flat_s0.00_r0.00_dead3_floor1.00
+h13,q40_w26_flat_s0.00_r0.00_dead5_floor0.00

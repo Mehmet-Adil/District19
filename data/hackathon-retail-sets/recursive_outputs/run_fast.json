@@ -1,0 +1,29 @@
+{
+  "window": 20,
+  "windows": 2,
+  "step": 4,
+  "algos": [
+    "lightgbm_l1",
+    "random_forest",
+    "ridge"
+  ],
+  "schemes": [
+    "recursive",
+    "direct",
+    "equal",
+    "linear",
+    "square"
+  ],
+  "smooths": [
+    0.0,
+    0.3,
+    0.6
+  ],
+  "with_a": 0.0,
+  "fast": true,
+  "final": false,
+  "scheme": "linear",
+  "smooth": 0.3,
+  "no_young_zero": false,
+  "tag": ""
+}

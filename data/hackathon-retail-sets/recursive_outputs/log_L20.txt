@@ -1,0 +1,4 @@
+
+=== cutoff index 129 | 230,479 training rows (0s)
+  lightgbm_l1    fit   890s | total   901s | best here: square/0.0/young0=False -> -3.85
+  lightgbm_q45   fit  1456s | total  1460s | best here: square/0.3/young0=False -> -5.41
