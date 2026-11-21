@@ -1,0 +1,18 @@
+
+=== cutoff index 129 | 230,479 training rows (0s)
+  xgb_l1_gpu     fit    35s | total    37s | best here: direct/0.6/young0=False -> -4.48
+  xgb_rf_gpu     fit    62s | total    63s | best here: direct/0.6/young0=True -> -10.44
+  hist_gb_l1     fit   176s | total   178s | best here: linear/0.6/young0=False -> -6.45
+  extra_trees    fit    39s | total    44s | best here: direct/0.3/young0=True -> -11.19
+  ridge          fit     3s | total     4s | best here: direct/0.0/young0=True -> -15.42
+  linear_l1      fit    10s | total    11s | best here: direct/0.6/young0=False -> -7.88
+
+=== cutoff index 125 | 221,709 training rows (0s)
+  xgb_l1_gpu     fit    33s | total    35s | best here: square/0.3/young0=False -> -3.86
+  xgb_rf_gpu     fit    58s | total    59s | best here: direct/0.0/young0=True -> -8.03
+  hist_gb_l1     fit   238s | total   241s | best here: equal/0.3/young0=False -> -5.59
+  extra_trees    fit    37s | total    42s | best here: direct/0.6/young0=True -> -8.62
+  ridge          fit     2s | total     3s | best here: direct/0.6/young0=True -> -13.71
+  linear_l1      fit     8s | total     9s | best here: direct/0.0/young0=False -> -6.73
+
+=== cutoff index 121 | 212,967 training rows (0s)
