@@ -16,3 +16,5 @@
   linear_l1      fit     8s | total     9s | best here: direct/0.0/young0=False -> -6.73
 
 === cutoff index 121 | 212,967 training rows (0s)
+  xgb_l1_gpu     fit    35s | total    37s | best here: direct/0.6/young0=False -> -13.87
+  xgb_rf_gpu     fit    63s | total    64s | best here: direct/0.6/young0=False -> -18.42

@@ -1,0 +1,18 @@
+
+=== cutoff index 129 | 230,479 training rows (1s)
+  xgb_l1_gpu     fit   112s | total   118s | best here: direct/0.6/young0=False -> -4.48
+  xgb_shallow    fit    62s | total    68s | best here: direct/0.6/young0=False -> -4.51
+  xgb_deep       fit   362s | total   373s | best here: direct/0.6/young0=False -> -4.74
+  xgb_slow       fit   205s | total   216s | best here: direct/0.6/young0=False -> -4.46
+  xgb_mcw50      fit   126s | total   132s | best here: direct/0.6/young0=False -> -4.02
+  xgb_mcw1000    fit    75s | total    80s | best here: direct/0.6/young0=False -> -5.09
+  xgb_reg        fit    94s | total    99s | best here: direct/0.3/young0=False -> -4.63
+  xgb_leaves     fit   311s | total   323s | best here: direct/0.6/young0=False -> -4.59
+  xgb_q45        fit   220s | total   229s | best here: square/0.6/young0=False -> -6.76
+  xgb_q40        fit   218s | total   227s | best here: square/0.6/young0=False -> -7.85
+
+=== cutoff index 125 | 221,709 training rows (1s)
+  xgb_l1_gpu     fit   157s | total   172s | best here: square/0.3/young0=False -> -3.86
+  xgb_shallow    fit    64s | total    70s | best here: direct/0.3/young0=False -> -3.73
+  xgb_deep       fit   146s | total   150s | best here: direct/0.3/young0=False -> -4.15
+  xgb_slow       fit   311s | total   323s | best here: linear/0.0/young0=False -> -3.87

@@ -1,0 +1,83 @@
+
+=== cutoff index 129 | 230,479 training rows (1s)
+  xgb_l1_gpu     fit   109s | total   120s | best here: direct/0.6/young0=False -> -4.48
+  xgb_shallow    fit    65s | total    74s | best here: direct/0.6/young0=False -> -4.51
+  xgb_mcw50      fit   140s | total   146s | best here: direct/0.6/young0=False -> -4.02
+  xgb_d6_mcw50   fit   188s | total   198s | best here: direct/0.3/young0=False -> -3.93
+  xgb_reg        fit   184s | total   200s | best here: direct/0.3/young0=False -> -4.63
+
+=== cutoff index 125 | 221,709 training rows (1s)
+  xgb_l1_gpu     fit   203s | total   210s | best here: square/0.3/young0=False -> -3.86
+  xgb_shallow    fit    42s | total    48s | best here: direct/0.3/young0=False -> -3.73
+  xgb_mcw50      fit   164s | total   171s | best here: square/0.3/young0=False -> -3.27
+  xgb_d6_mcw50   fit    56s | total    61s | best here: direct/0.6/young0=False -> -3.19
+  xgb_reg        fit    55s | total    58s | best here: equal/0.6/young0=False -> -3.93
+
+=== cutoff index 121 | 212,967 training rows (0s)
+  xgb_l1_gpu     fit    48s | total    50s | best here: direct/0.6/young0=False -> -13.87
+  xgb_shallow    fit    27s | total    29s | best here: direct/0.6/young0=False -> -13.84
+  xgb_mcw50      fit    43s | total    44s | best here: direct/0.6/young0=False -> -13.33
+  xgb_d6_mcw50   fit    26s | total    28s | best here: equal/0.6/young0=False -> -13.23
+  xgb_reg        fit    34s | total    35s | best here: linear/0.6/young0=False -> -14.05
+
+=== cutoff index 117 | 204,262 training rows (0s)
+  xgb_l1_gpu     fit    33s | total    35s | best here: direct/0.3/young0=False -> -25.65
+  xgb_shallow    fit    21s | total    22s | best here: direct/0.3/young0=False -> -25.92
+  xgb_mcw50      fit    42s | total    43s | best here: direct/0.6/young0=False -> -25.36
+  xgb_d6_mcw50   fit    26s | total    27s | best here: direct/0.6/young0=False -> -25.36
+  xgb_reg        fit    35s | total    37s | best here: direct/0.6/young0=False -> -25.45
+
+=== cutoff index 113 | 195,615 training rows (0s)
+  xgb_l1_gpu     fit    33s | total    34s | best here: linear/0.6/young0=False -> -39.01
+  xgb_shallow    fit    19s | total    20s | best here: direct/0.6/young0=False -> -38.92
+  xgb_mcw50      fit    40s | total    41s | best here: equal/0.6/young0=False -> -38.23
+  xgb_d6_mcw50   fit    25s | total    26s | best here: linear/0.6/young0=False -> -38.17
+  xgb_reg        fit    32s | total    33s | best here: recursive/0.6/young0=False -> -39.11
+
+=== cutoff index 109 | 187,087 training rows (0s)
+  xgb_l1_gpu     fit    33s | total    35s | best here: linear/0.6/young0=False -> -29.28
+  xgb_shallow    fit    18s | total    19s | best here: direct/0.6/young0=False -> -29.38
+  xgb_mcw50      fit    44s | total    45s | best here: equal/0.6/young0=False -> -29.06
+  xgb_d6_mcw50   fit    24s | total    25s | best here: direct/0.6/young0=False -> -29.06
+  xgb_reg        fit    31s | total    33s | best here: direct/0.6/young0=False -> -29.43
+
+Mean over 6 windows (1953s). Top 25 by w8-13:
+                                          w1-7  w8-13    all
+algo           scheme smooth young_zero                     
+REF_median_26w -      0.0    False      -21.93 -16.10 -19.24
+                             True       -21.95 -16.11 -19.26
+xgb_d6_mcw50   direct 0.6    False      -20.96 -16.42 -18.86
+xgb_mcw50      direct 0.3    False      -21.15 -16.46 -18.99
+                      0.6    False      -21.08 -16.46 -18.95
+                      0.0    False      -21.19 -16.47 -19.01
+xgb_d6_mcw50   direct 0.3    False      -20.99 -16.49 -18.91
+                      0.0    False      -21.05 -16.51 -18.96
+               square 0.6    False      -21.01 -16.61 -18.98
+xgb_mcw50      square 0.6    False      -21.09 -16.63 -19.03
+xgb_d6_mcw50   square 0.3    False      -21.04 -16.63 -19.00
+                      0.0    False      -21.07 -16.63 -19.02
+xgb_mcw50      square 0.3    False      -21.11 -16.66 -19.05
+                      0.0    False      -21.18 -16.70 -19.11
+ENS_median_all direct 0.6    False      -21.52 -16.70 -19.30
+xgb_d6_mcw50   linear 0.6    False      -21.03 -16.72 -19.04
+                      0.3    False      -21.06 -16.72 -19.06
+ENS_median_all direct 0.3    False      -21.57 -16.73 -19.33
+                      0.0    False      -21.61 -16.74 -19.36
+xgb_d6_mcw50   linear 0.0    False      -21.11 -16.74 -19.09
+xgb_l1_gpu     direct 0.6    False      -21.67 -16.75 -19.40
+xgb_mcw50      linear 0.3    False      -21.12 -16.75 -19.11
+                      0.6    False      -21.09 -16.77 -19.09
+                      0.0    False      -21.17 -16.77 -19.14
+xgb_l1_gpu     direct 0.3    False      -21.70 -16.77 -19.42
+
+Best config per algorithm:
+                scheme  smooth  young_zero   w1-7  w8-13    all
+algo                                                           
+REF_median_26w       -     0.0       False -21.93 -16.10 -19.24
+xgb_d6_mcw50    direct     0.6       False -20.96 -16.42 -18.86
+xgb_mcw50       direct     0.3       False -21.15 -16.46 -18.99
+ENS_median_all  direct     0.6       False -21.52 -16.70 -19.30
+xgb_l1_gpu      direct     0.6       False -21.67 -16.75 -19.40
+xgb_shallow     direct     0.6       False -21.63 -16.78 -19.39
+xgb_reg         direct     0.6       False -21.81 -16.80 -19.50
+REF_median_13w       -     0.0       False -22.15 -17.31 -19.92

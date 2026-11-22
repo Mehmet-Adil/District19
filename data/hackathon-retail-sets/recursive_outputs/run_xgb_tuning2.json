@@ -1,0 +1,31 @@
+{
+  "window": 20,
+  "windows": 6,
+  "step": 4,
+  "algos": [
+    "xgb_l1_gpu",
+    "xgb_shallow",
+    "xgb_mcw50",
+    "xgb_d6_mcw50",
+    "xgb_reg"
+  ],
+  "schemes": [
+    "recursive",
+    "direct",
+    "equal",
+    "linear",
+    "square"
+  ],
+  "smooths": [
+    0.0,
+    0.3,
+    0.6
+  ],
+  "with_a": 0.0,
+  "fast": false,
+  "final": false,
+  "scheme": "linear",
+  "smooth": 0.3,
+  "no_young_zero": false,
+  "tag": "xgb_tuning2"
+}

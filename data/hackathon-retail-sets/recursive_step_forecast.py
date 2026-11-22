@@ -193,6 +193,14 @@ class SK:
         return self.m.predict(X)
 
 
+XGB_L1 = dict(objective='reg:absoluteerror', learning_rate=0.1, max_depth=8, min_child_weight=200,
+              subsample=0.7, colsample_bynode=0.8, reg_lambda=1.0)
+
+
+def _xgb_l1(**over):
+    return XGB(**{**XGB_L1, **over})
+
+
 def _linear(est):
     return lambda: make_pipeline(FunctionTransformer(signed_log), StandardScaler(), est)
 
@@ -204,6 +212,17 @@ ALGOS = {
     'xgb_rf_gpu': lambda: XGB(rounds=1, clip=50, objective='reg:squarederror', learning_rate=1.0,
                               num_parallel_tree=100, max_depth=12, min_child_weight=30, subsample=0.3,
                               colsample_bynode=0.5),
+    # GPU hyperparameter variants of xgb_l1_gpu (only the listed settings change)
+    'xgb_shallow': lambda: _xgb_l1(max_depth=4, rounds=300),
+    'xgb_deep': lambda: _xgb_l1(max_depth=12, min_child_weight=500, learning_rate=0.05, rounds=300),
+    'xgb_slow': lambda: _xgb_l1(learning_rate=0.05, rounds=300),
+    'xgb_mcw50': lambda: _xgb_l1(min_child_weight=50),
+    'xgb_d6_mcw50': lambda: _xgb_l1(max_depth=6, min_child_weight=50, rounds=200),
+    'xgb_mcw1000': lambda: _xgb_l1(min_child_weight=1000),
+    'xgb_reg': lambda: _xgb_l1(reg_lambda=10.0, reg_alpha=1.0, subsample=0.5, colsample_bynode=0.6),
+    'xgb_leaves': lambda: _xgb_l1(max_depth=0, grow_policy='lossguide', max_leaves=63),
+    'xgb_q45': lambda: _xgb_l1(objective='reg:quantileerror', quantile_alpha=0.45),
+    'xgb_q40': lambda: _xgb_l1(objective='reg:quantileerror', quantile_alpha=0.40),
     # CPU
     'lightgbm_l1': lambda: LGB(),
     'lightgbm_q45': lambda: LGB(objective='quantile', alpha=0.45),
@@ -350,6 +369,8 @@ def backtest(args, Ym, ts_stats, set_a):
                     G = postprocess(F, wss[:, c], age[:, c], young_zero=yz)
                     rows.append({'cutoff': c, 'algo': 'ENS_median_all', 'scheme': scheme, 'smooth': a,
                                  'young_zero': yz, **score(Ym, c, G)})
+        OUT.mkdir(exist_ok=True)                       # save after every window, so a stopped run keeps its work
+        pd.DataFrame(rows).to_csv(OUT / f'backtest_{args.tag or "run"}_partial.csv', index=False)
     return pd.DataFrame(rows)
 
 
